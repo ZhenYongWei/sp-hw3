@@ -1,0 +1,106 @@
+% CVPR 2024 Style File
+% Based on official CVPR template
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvpr}[2024/01/01 CVPR Style]
+
+% Page layout
+\RequirePackage{geometry}
+\geometry{
+  letterpaper,
+  top=0.75in,
+  bottom=0.75in,
+  left=0.75in,
+  right=0.75in
+}
+
+% Two-column format
+\setlength{\columnsep}{0.3125in}
+\setlength{\textwidth}{6.875in}
+\setlength{\textheight}{8.875in}
+
+% Fonts
+\renewcommand{\normalsize}{\fontsize{10}{12}\selectfont}
+\renewcommand{\small}{\fontsize{9}{11}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{8}{10}\selectfont}
+
+% Section formatting
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-1.5ex \@plus -.5ex \@minus -.2ex}%
+  {1.0ex \@plus .2ex}%
+  {\normalfont\large\bfseries}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-1.25ex \@plus -.5ex \@minus -.2ex}%
+  {0.75ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-1.0ex \@plus -.5ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries\itshape}}
+
+% Title formatting
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 0.5em%
+  \begin{center}%
+    {\LARGE \bfseries \@title \par}%
+    \vskip 1.0em%
+    {\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 0.5em%
+    {\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.0em}
+
+% Abstract formatting
+\renewenvironment{abstract}{%
+  \centerline{\large\bfseries Abstract}%
+  \vspace{-0.5em}%
+  \begin{quote}\small}
+  {\par\end{quote}\vskip 1em}
+
+% Table and figure captions
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1: #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{2pt}
+
+% Equation spacing
+\setlength{\abovedisplayskip}{8pt}
+\setlength{\belowdisplayskip}{8pt}
+
+% List spacing
+\setlength{\topsep}{4pt}
+\setlength{\partopsep}{2pt}
+\setlength{\itemsep}{2pt}
+\setlength{\parsep}{0pt}
+
+% Page numbering
+\pagestyle{plain}
+
+% Hyperlinks
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\endinput

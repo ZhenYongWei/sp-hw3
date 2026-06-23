@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2024}[2024/01/01 NeurIPS 2024 style]
+
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+
+\renewcommand{\abstractname}{Abstract}
+
+\twocolumn
+
+\pagestyle{plain}
+
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}
+    \let \footnote \thanks
+    {\Large \bfseries \@title \par}%
+    \vskip 1.5em%
+    {\large \@author \par}%
+    \vskip 1em%
+    {\small \@affiliation \par}%
+  \end{center}
+  \par
+  \vskip 1.5em%
+}
+
+\endinput

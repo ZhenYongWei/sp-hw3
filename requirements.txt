@@ -1,0 +1,37 @@
+# Core
+torch>=2.4.0
+torchvision>=0.19.0
+numpy==1.26.4
+scipy
+matplotlib
+Pillow
+opencv-python
+trimesh
+pyarrow
+
+# LeRobot (Task 2)
+lerobot==0.4.4
+
+# 3DGS (Task 1)
+# Install separately: diff-gaussian-rasterization, simple-knn
+# pip install git+https://github.com/graphdeco-inria/gaussian-splatting --no-build-isolation
+
+# threestudio (Task 1 AIGC)
+# Clone and install separately: https://github.com/threestudio/threestudio
+tinycudann
+pytorch-lightning>=2.0.0
+nerfacc==0.5.2
+envlight
+transformers==4.44.0
+controlnet_aux
+diffusers
+accelerate
+wandb
+
+# COLMAP (Task 1)
+# Install via system package manager: apt install colmap
+
+# Visualization
+plotly
+imageio
+imageio-ffmpeg
