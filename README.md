@@ -257,6 +257,6 @@ If you use this work, please cite:
   author = {Zhenyong Wei},
   title = {Multi-Source 3D Asset Generation and Scene Fusion via 3DGS, and Cross-Environment Generalization with LeRobot ACT},
   year = {2026},
-  url = {https://github.com/zhenyong-wzy/spatial-ai-hw3}
+  url = {https://github.com/ZhenYongWei/sp-hw3}
 }
 ```
