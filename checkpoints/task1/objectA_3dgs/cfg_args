@@ -1,0 +1,1 @@
+Namespace(sh_degree=3, source_path='/mnt/workspace/zhenyong.wzy/work/fd/spatial-ai/hw3/task1_data/real_object', model_path='/mnt/workspace/zhenyong.wzy/work/fd/spatial-ai/hw3/task1_data/real_object_official', images='images', depths='', resolution=-1, white_background=False, train_test_exp=False, data_device='cuda', eval=False)

@@ -1,0 +1,1 @@
+Namespace(sh_degree=3, source_path='/root/public/data/Mip-NeRF360/garden', model_path='/mnt/workspace/zhenyong.wzy/work/fd/spatial-ai/hw3/task1_data/garden_official', images='images', depths='', resolution=-1, white_background=False, train_test_exp=False, data_device='cuda', eval=False)

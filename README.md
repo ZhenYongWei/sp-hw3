@@ -198,22 +198,21 @@ python scripts/task2_act/gen_act_official_fig.py
 
 ## Model Weights
 
-Due to size, model weights are hosted on cloud storage:
+Pre-trained model weights are included in `checkpoints/`:
 
-- **[Baidu Pan](https://pan.baidu.com/s/1xxxxxxxxxxxxxxxx)** (extraction code: `hw3s`)
+| Path | Size | Description |
+|------|------|-------------|
+| `checkpoints/task1/objectA_3dgs/` | 231 MB | Flower pot 3DGS (official, PSNR 31.94) |
+| `checkpoints/task1/garden_3dgs/` | 1.0 GB | Mip-NeRF 360 garden 3DGS (official, PSNR 29.65) |
+| `checkpoints/task1/objectB_pineapple/` | 5 MB | Pineapple mesh (OBJ + PBR textures) |
+| `checkpoints/task1/objectC_cactus/` | 1 MB | Cactus mesh (OBJ + baked PLY) |
+| `checkpoints/task1/fused_scene.ply` | 26 MB | Final fused scene (4.5M Gaussians) |
+| `checkpoints/task2/envA_epoch199.pt` | 197 MB | ACT checkpoint (Env A, epoch 199) |
+| `checkpoints/task2/envABC_epoch199.pt` | 197 MB | ACT checkpoint (Env A+B+C, epoch 199) |
+| `checkpoints/task2/envA_chunk10_epoch199.pt` | 197 MB | ACT checkpoint (chunk=10, epoch 199) |
+| `checkpoints/task2/envA_chunk50_epoch199.pt` | 198 MB | ACT checkpoint (chunk=50, epoch 199) |
 
-Contents:
-
-| Model | Size | Description |
-|-------|------|-------------|
-| `objectA_3dgs/` | 566 MB | Flower pot 3DGS (official, PSNR 31.94) |
-| `garden_3dgs/` | 3.0 GB | Mip-NeRF 360 garden 3DGS (official, PSNR 29.65) |
-| `objectB_fantasia3d/` | 358 MB | Pineapple mesh + PBR textures |
-| `objectC_zero123/` | 1.0 GB | Cactus mesh + neural baked texture |
-| `act_envA/` | 788 MB | ACT checkpoint (Env A, epoch 199) |
-| `act_envABC/` | 788 MB | ACT checkpoint (Env A+B+C, epoch 199) |
-| `act_envA_chunk10/` | 788 MB | ACT checkpoint (chunk=10, epoch 199) |
-| `act_envA_chunk50/` | 788 MB | ACT checkpoint (chunk=50, epoch 199) |
+For 3DGS rendering, each model directory includes `cameras.json`, `cfg_args`, and `exposure.json` metadata required by the official gaussian-splatting viewer.
 
 ---
 
@@ -240,6 +239,9 @@ pdflatex main.tex && pdflatex main.tex
 │   ├── task2_act/           # ACT training + evaluation
 │   └── figures/             # Report figure generation
 ├── configs/                 # threestudio YAML configs
+├── checkpoints/             # Model weights (3DGS + mesh + ACT)
+│   ├── task1/               # Object A/B/C + garden + fused scene
+│   └── task2/               # ACT checkpoints (4 models, final epoch)
 ├── outputs/                 # Flythrough video, eval results, training logs
 ├── data/                    # Input data (cactus_rgba.png) + download guide
 ├── requirements.txt

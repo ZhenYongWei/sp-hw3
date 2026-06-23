@@ -1,0 +1,7 @@
+newmtl default
+Ka 0.0 0.0 0.0
+map_Kd texture_kd.jpg
+Ks 0.0 0.0 0.0
+map_Bump texture_nrm.jpg
+map_Pm texture_metallic.jpg
+map_Pr texture_roughness.jpg

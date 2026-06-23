@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Data (too large for git)
+data/calvin-lerobot/
+data/garden/
+data/objectA_images/
+data/objectA_colmap/
+*.zip
+*.tar.gz
+
+# Large 3DGS outputs (training renders, not model weights)
+outputs/objectA_3dgs/train/
+outputs/objectA_3dgs/test/
+outputs/garden_3dgs/train/
+outputs/garden_3dgs/test/
+
+# threestudio cache
+.threestudio_cache/
+.hf_cache/
+
+# Intermediate checkpoints (keep only final epoch)
+checkpoints/task1/objectA_3dgs/point_cloud/iteration_7000/
+checkpoints/task1/garden_3dgs/point_cloud/iteration_7000/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# LaTeX aux
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
